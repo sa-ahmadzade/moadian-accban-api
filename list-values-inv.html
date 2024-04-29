@@ -1,0 +1,82 @@
+در این لیست اسامی فیلدهای هدر و بدنه صورتحساب همراه با نوع داده انها درج شده است.
+قبل از ارسال هر صورتحساب لازم هست نوع داده ان را اصلاخ نمایید
+
+ID	arra1	field1	type1	len1	command1	text1
+1	header	taxid	string	22		شماره منحصر به فرد مالیاتی
+2	header	indatim	long	13		تاریخ  صدور
+3	header	indati2m	long	13		تاریخ  ایجاد 
+4	header	inty	int	1	1,2,3	نوع صورتحساب
+5	header	inno	string	10		سریال صورتحساب
+6	header	irtaxid	string	22	اصلاح/ابطال/برگشت فقط	شماره منحصر به فرد مالیاتی صورتحساب مرجع
+7	header	inp	int	2	1 تا 7 	الگوی صورتحساب
+8	header	ins	int	1	صادرات برگشت ندارد 4 ندارد	موضوع صورتحساب
+9	header	tins	string	14	company	شماره اقتصادی فروشنده
+10	header	tob	int	1	1,2,3,4	نوع شخص خریدار
+11	header	bid	string	12	tinb or National_Code	شماره/شناسه ملی/شناسه مشارکت مدنی/کد فراگیر خریدار
+12	header	tinb	string	14		شماره اقتصادی خریدار
+13	header	sbc	string	10	company	کد شعبه فروشنده
+14	header	bpc	string	10		کد پستی خریدار
+15	header	bbc	string	10		کد شعبه خریدار
+16	header	ft	int	1		نوع پرواز
+17	header	bpn	string	9		شماره گذرنامه خریدار
+18	header	scln	string	14	company	شماره پروانه گمرکی فروشنده
+19	header	scc	string	5		کد گمرک محل اظهار
+20	header	cdcn	string	14		ﺷﻤﺎﺭﻩ ﻛﻮﺗﺎﮊ ﺍﻇﻬﺎﺭﻧﺎﻣﻪ ﮔﻤﺮﻛﻲ 
+21	header	cdcd	long	5	date5	ﺗﺎﺭﻳﺦ ﻛﻮﺗﺎﮊ ﺍﻇﻬﺎﺭﻧﺎﻣﻪ ﮔﻤﺮﻛﻲ 
+22	header	crn	string	12	company	شناسه یکتای ثبت قرارداد فروشنده
+23	header	billid	string	19		شماره اشتراک/ شناسه قبض بهره بردار
+24	header	tprdis	decimal	18		مجموع مبلغ قبل از کسر تخفیف
+25	header	tdis	decimal	18		مجموع تخفیفات
+26	header	tadis	decimal	18		مجموع مبلغ پس از کسر تخفیف
+27	header	tvam	decimal	18		مجموع مالیات بر ارزش افزوده
+28	header	todam	decimal	18		مجموع سایر مالیات، عوارض و وجوه قانونی
+29	header	tbill	decimal	18		مجموع صورتحساب
+30	header	tonw	double	16	برای خدمات اختیاری	مجموع وزن خالص
+31	header	torv	double	18		مجموع ارزش ریالی
+32	header	tocv	double	14	4	مجموع ارزش ارزی
+33	header	setm	int	1	1,2,3	روش تسویه
+34	header	cap	decimal	18		مبلغ پرداختی نقدی
+35	header	insp	decimal	18		مبلغ پرداختی نسیه
+36	header	tvop	decimal	18		مجموع سهم مالیات بر ارزش افزوده از پرداخت
+37	header	tax17	decimal	18		مالیات موضوع ماده 17
+38	body	sstid	string	13		شناسه کالا/خدمت
+39	body	sstt	string	400		شرح کالا/خدمت
+40	body	am	double	18		تعداد/مقدار
+41	body	mu	string	8		واحد اندازه گیری
+42	body	nw	double	15	8	وزن خالص
+43	body	fee	decimal	18	8	مبلغ واحد
+44	body	cfee	decimal	14	4	میزان ارز
+45	body	cut	string	3		نوع ارز
+46	body	exr	decimal	18	0	نرخ برابری ارز با ریال
+47	body	ssrv	double	18	0	ارزش ریالی کالا
+48	body	sscv	double	14	4	ارزش ارزی کالا
+49	body	prdis	decimal	18	0	مبلغ قبل از تخفیف
+50	body	dis	decimal	18	0	مبلغ تخفیف
+51	body	adis	decimal	18	0	مبلغ بعد از تخفیف
+52	body	vra	decimal	3	2	نرخ مالیات بر ارزش افزوده
+53	body	vam	decimal	18		مبلغ مالیات بر ارزش افزوده
+54	body	odt	string	255		موضوع سایرمالیات و عوارض
+55	body	odr	decimal	3	2	نرخ سایرمالیات و عوارض
+56	body	odam	decimal	18		مبلغ سایرمالیات و عوارض
+57	body	olt	string	255		موضوع سایر وجوه قانونی
+58	body	olr	decimal	3	2	نرخ سایر وجوه قانونی
+59	body	olam	decimal	18		مبلغ سایر وجوه قانونی
+60	body	consfee	decimal	18		اجرت ساخت
+61	body	spro	decimal	18		سود فروشنده
+62	body	bros	decimal	18		حقالعمل
+63	body	tcpbs	decimal	18		جمع کل اجرت، حقالعمل و سود
+64	body	cop	decimal	18		سهم نقدی از پرداخت
+65	body	vop	decimal	18		سهم ارزش افزوده از پرداخت
+66	body	bsrn	string	12		شناسه یکتای ثبت قرارداد حق العملکاری
+67	body	tsstam	decimal	18		مبلغ کل کالا/خدمت
+68	payment	iinn	string	9		شماره سوییچ پرداخت
+69	payment	acn	string	14		شماره پذیرنده فروشگاهی
+70	payment	trmn	string	8		شماره پایانه
+71	payment	pmt	int	2		روش پرداخت
+72	payment	trn	string	14		شماره پیگیری
+73	payment	pcn	string	16		شماره کارت پرداخت کننده صورتحساب
+74	payment	pid	string	12		شماره/شناسه ملی/کد فراگیر اتباع غیر ایرانی پرداخت
+75	payment	pdt	Timestamp	13		تاریخ و زمان پرداخت صورتحساب
+76	payment	pv	double	18		مبلغ پرداختی
+77	body	pspd	double	18		تفاوت نرخ خرید و فروش ارز/کارمزد فروش ارز
+
